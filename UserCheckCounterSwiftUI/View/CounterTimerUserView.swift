@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CounterTimerUserView: View {
     @EnvironmentObject var user: UserManager
-    @StateObject private var timer = TimerCounter()
- 
+    @ObservedObject var timer: TimerCounter
+    
     var body: some View {
         
         VStack {

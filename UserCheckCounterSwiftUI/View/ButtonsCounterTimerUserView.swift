@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ButtonsCounterTimerUserView: View {
- 
+    @EnvironmentObject var user: UserManager
     @ObservedObject var timer: TimerCounter
     
     
@@ -18,7 +18,7 @@ struct ButtonsCounterTimerUserView: View {
             .frame(width: 150, height: 50)
             .font(.title2)
             .foregroundColor(.black)
-            .background(.red)
+            .background(timer.titleButton == "Wait ..." ? .gray : .red)
             .cornerRadius(15)
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
@@ -27,7 +27,7 @@ struct ButtonsCounterTimerUserView: View {
             
             Spacer()
             
-            Button("Log Off") {}
+            Button("Log Off") { logOff() }
             .frame(width: 150, height: 50)
             .font(.title2)
             .foregroundColor(.black)
@@ -39,6 +39,14 @@ struct ButtonsCounterTimerUserView: View {
             )
         }
         .padding()
+    }
+}
+
+extension ButtonsCounterTimerUserView {
+    private func logOff() {
+        UserDefaults.standard.removeObject(forKey: "User")
+        user.isRegister.toggle()
+        user.name = ""
     }
 }
 

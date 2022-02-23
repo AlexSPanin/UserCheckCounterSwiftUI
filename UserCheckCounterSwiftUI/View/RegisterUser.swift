@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RegisterUser: View {
     @EnvironmentObject var user: UserManager
+    @ObservedObject var timer: TimerCounter
     
-    @StateObject private var timer = TimerCounter()
     @State private var name = ""
     @State private var isCorrect = false
     
@@ -23,7 +23,7 @@ struct RegisterUser: View {
                 .multilineTextAlignment(.center)
                 .textFieldStyle(.roundedBorder)
                 
-            Text("Count")
+                Text("\(name.count)")
                     .font(.title3)
                     .foregroundColor( isCorrect ? .green : .red)
             }
@@ -39,12 +39,17 @@ struct RegisterUser: View {
 }
 
 extension RegisterUser {
+    
     private func addUser() {
         if !name.isEmpty {
             user.name = name
             timer.setCounter(name.count)
+            UserDefaults.standard.set(name, forKey: "User")
             user.isRegister.toggle()
+            print(user.isRegister)
         }
     }
+    
+    
 }
 

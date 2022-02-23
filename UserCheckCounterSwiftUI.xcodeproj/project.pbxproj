@@ -61,10 +61,10 @@
 		E2C2BEAC27C63947008DF8F0 /* UserCheckCounterSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				E2CE6D5027C659FD00373B7D /* Services */,
 				E2C2BEAD27C63947008DF8F0 /* UserCheckCounterSwiftUIApp.swift */,
 				E2C2BEAF27C63947008DF8F0 /* StarterView.swift */,
 				E2CE6D5127C65A2500373B7D /* View */,
-				E2CE6D5027C659FD00373B7D /* Services */,
 				E2CE6D4F27C659E000373B7D /* DataManeger */,
 				E2C2BEB127C63947008DF8F0 /* Assets.xcassets */,
 				E2C2BEB327C63947008DF8F0 /* Preview Content */,
