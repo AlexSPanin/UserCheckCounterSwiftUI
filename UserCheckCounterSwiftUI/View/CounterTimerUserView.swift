@@ -7,33 +7,33 @@
 
 import SwiftUI
 
-struct RegisteredUserView: View {
- 
-    
-    @State private var user = "Panin"
-    
+struct CounterTimerUserView: View {
+    @EnvironmentObject var user: UserManager
     @StateObject private var timer = TimerCounter()
-    
     
     var body: some View {
         
         VStack {
-            Spacer(minLength: 20)
-            Text("Hello! \(user)")
+            Spacer(minLength: 30)
+            
+            Text("Hello! \(user.name)")
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
-    
+            Spacer(minLength: 10)
+            
             Text("\(timer.counter)")
                 .font(.title)
                 .fontWeight(.bold)
-            Spacer(minLength: 20)
+            Spacer(minLength: 40)
             
-           ButtonsCounterView(timer: timer)
-            
-            Spacer()
+            ButtonsCounterTimerUserView(timer: timer)
+            Spacer(minLength: 200)
         }
-       
     }
 }
+
+
+
+
 
 
