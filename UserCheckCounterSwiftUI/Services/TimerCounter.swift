@@ -17,6 +17,7 @@ class TimerCounter: ObservableObject {
     var titleButton = "Start"
     
     func startTimer() {
+        
         if counter > 0 {
             timer = Timer.scheduledTimer(
                 timeInterval: 1,
@@ -27,6 +28,11 @@ class TimerCounter: ObservableObject {
             )
         }
         buttonDidTaped()
+    }
+    
+    func setCounter(_ counter: Int) {
+        self.counter = counter
+        countStarted = counter
     }
     
     @objc private func updateTimer() {

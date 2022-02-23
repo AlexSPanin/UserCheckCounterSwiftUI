@@ -10,7 +10,7 @@ import SwiftUI
 struct CounterTimerUserView: View {
     @EnvironmentObject var user: UserManager
     @StateObject private var timer = TimerCounter()
-    
+ 
     var body: some View {
         
         VStack {
@@ -32,8 +32,11 @@ struct CounterTimerUserView: View {
     }
 }
 
-
-
-
+extension CounterTimerUserView {
+    private func setCount() -> Int {
+        timer.setCounter(user.name.count)
+        return timer.counter
+    }
+}
 
 
