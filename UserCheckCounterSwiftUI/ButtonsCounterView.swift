@@ -13,10 +13,15 @@ struct ButtonsCounterView: View {
     var body: some View {
         
         HStack {
-            Button(timer.titleButton) { timer.startTimer() }
+            Button(action: timer.startTimer) {
+                Text("\(timer.titleButton)")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+            }
             .frame(width: 150, height: 50, alignment: .leading)
-            .foregroundColor(.black)
             .background(.red)
+            .cornerRadius(15)
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(.black, lineWidth: 2)
@@ -31,7 +36,9 @@ struct ButtonsCounterView: View {
                         .stroke(.black, lineWidth: 2)
                 )
         }
-        padding()
+        
+   
+    
     }
 }
 

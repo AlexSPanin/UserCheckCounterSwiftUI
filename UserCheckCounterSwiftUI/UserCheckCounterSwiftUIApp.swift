@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct UserCheckCounterSwiftUIApp: App {
     var body: some Scene {
