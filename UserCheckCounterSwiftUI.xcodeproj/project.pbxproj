@@ -13,6 +13,7 @@
 		E2C2BEB527C63947008DF8F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C2BEB427C63947008DF8F0 /* Preview Assets.xcassets */; };
 		E2C2BEBC27C639C1008DF8F0 /* RegisteredUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2BEBB27C639C1008DF8F0 /* RegisteredUserView.swift */; };
 		E2C2BEBE27C63E6C008DF8F0 /* TimerCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2BEBD27C63E6C008DF8F0 /* TimerCounter.swift */; };
+		E2C2BEC027C64600008DF8F0 /* ButtonsCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C2BEBF27C64600008DF8F0 /* ButtonsCounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E2C2BEB427C63947008DF8F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E2C2BEBB27C639C1008DF8F0 /* RegisteredUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisteredUserView.swift; sourceTree = "<group>"; };
 		E2C2BEBD27C63E6C008DF8F0 /* TimerCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCounter.swift; sourceTree = "<group>"; };
+		E2C2BEBF27C64600008DF8F0 /* ButtonsCounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsCounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E2C2BEAF27C63947008DF8F0 /* ContentView.swift */,
 				E2C2BEBD27C63E6C008DF8F0 /* TimerCounter.swift */,
 				E2C2BEBB27C639C1008DF8F0 /* RegisteredUserView.swift */,
+				E2C2BEBF27C64600008DF8F0 /* ButtonsCounterView.swift */,
 				E2C2BEB127C63947008DF8F0 /* Assets.xcassets */,
 				E2C2BEB327C63947008DF8F0 /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2C2BEC027C64600008DF8F0 /* ButtonsCounterView.swift in Sources */,
 				E2C2BEB027C63947008DF8F0 /* ContentView.swift in Sources */,
 				E2C2BEBC27C639C1008DF8F0 /* RegisteredUserView.swift in Sources */,
 				E2C2BEBE27C63E6C008DF8F0 /* TimerCounter.swift in Sources */,

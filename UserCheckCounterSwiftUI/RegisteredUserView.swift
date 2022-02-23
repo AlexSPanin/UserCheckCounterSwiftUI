@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct RegisteredUserView: View {
+ //   @ObservedObject var timer: TimerCounter
+    
     @State private var user = "Panin"
-    @State private var count = 3
-    @State private var titleButton = "Start"
+ //   @State private var count = 3
+ //   @State private var titleButton = "Start"
+    
+    @StateObject private var timer = TimerCounter()
     
     
     var body: some View {
@@ -20,23 +24,13 @@ struct RegisteredUserView: View {
             Text("Hello! \(user)")
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
-            Spacer(minLength: 10)
-            Text("\(count)")
+    
+            Text("\(timer.counter)")
                 .font(.title)
-                .bold()
+                .fontWeight(.bold)
             Spacer(minLength: 20)
-            HStack {
-                Spacer()
-                Button(titleButton) {}
-                .foregroundColor(.black)
-                .background(.red)
-                
-           Spacer()
-                Button("Log Off") {}
-                .foregroundColor(.black)
-                .background(.green)
-                Spacer()
-            }
+            
+           ButtonsCounterView(timer: timer)
             
             Spacer()
         }
@@ -44,10 +38,4 @@ struct RegisteredUserView: View {
     }
 }
 
-struct RegisteredUserView_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack{
-        RegisteredUserView()
-        }
-    }
-}
+
